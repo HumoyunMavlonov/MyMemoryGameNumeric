@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/levelScreen"
+        android:name="uz.gitauz.mymemorygamenumeric.ui.screens.LevelScreen"
+        android:label="screen_level"
+        tools:layout="@layout/screen_level" >
+        <action
+            android:id="@+id/action_levelScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+        <action
+            android:id="@+id/action_levelScreen_to_aboutScreen"
+            app:destination="@id/aboutScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="uz.gitauz.mymemorygamenumeric.ui.screens.GameScreen"
+        android:label="screen_game"
+        tools:layout="@layout/screen_game" />
+    <fragment
+        android:id="@+id/testScreen"
+        android:name="uz.gitauz.mymemorygamenumeric.ui.screens.TestScreen"
+        android:label="TestScreen" />
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/splashscreen"
+        android:name="uz.gitauz.mymemorygamenumeric.ui.screens.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_levelScreen"
+            app:destination="@id/levelScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutScreen"
+        android:name="uz.gitauz.mymemorygamenumeric.ui.screens.AboutScreen"
+        android:label="AboutScreen" />
+</navigation>

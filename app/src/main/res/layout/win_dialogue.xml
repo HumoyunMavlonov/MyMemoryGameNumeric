@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/animation_win"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/menudialog"
+        android:layout_marginTop="50dp"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:src="@drawable/home_btn"
+        android:layout_gravity="bottom|center"
+        tools:ignore="ContentDescription,MissingConstraints" />
+    <ImageView
+        android:id="@+id/loadrestart"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:src="@drawable/loading"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="bottom|end"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
